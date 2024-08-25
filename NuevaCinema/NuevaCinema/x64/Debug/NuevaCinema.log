@@ -1,9 +1,11 @@
 ﻿  booking.cpp
   cinema.cpp
   movie.cpp
+  NuevaCinema.cpp
   room.cpp
   sale.cpp
   schedule.cpp
   seat.cpp
   Generando código...
-  NuevaCinema.vcxproj -> C:\programacion\newdirectory\ProjectNuevaCinemaSA\NuevaCinema\x64\Debug\NuevaCinema.exe
+  LINK : no se encontró C:\programacion\ProjectNuevaCinemaSA\ProjectNuevaCinemaSA\NuevaCinema\x64\Debug\NuevaCinema.exe o no lo generó el último vínculo incremental; ejecutando vínculo completo
+  NuevaCinema.vcxproj -> C:\programacion\ProjectNuevaCinemaSA\ProjectNuevaCinemaSA\NuevaCinema\x64\Debug\NuevaCinema.exe
