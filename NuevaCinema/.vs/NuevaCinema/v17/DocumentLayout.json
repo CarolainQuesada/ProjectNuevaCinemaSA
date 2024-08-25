@@ -1,9 +1,9 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\programacion\\ProjectNuevaCinemaSA\\NuevaCinema\\",
+  "WorkspaceRootPath": "C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:NuevaCinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
@@ -14,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -29,16 +29,12 @@
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
-            {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "NuevaCinema.cpp",
-              "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
+              "DocumentMoniker": "C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
               "RelativeDocumentMoniker": "NuevaCinema.cpp",
-              "ToolTip": "C:\\programacion\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
+              "ToolTip": "C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
               "RelativeToolTip": "NuevaCinema.cpp",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",

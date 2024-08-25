@@ -127,7 +127,23 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="booking.cpp" />
+    <ClCompile Include="cinema.cpp" />
+    <ClCompile Include="movie.cpp" />
     <ClCompile Include="NuevaCinema.cpp" />
+    <ClCompile Include="room.cpp" />
+    <ClCompile Include="sale.cpp" />
+    <ClCompile Include="schedule.cpp" />
+    <ClCompile Include="seat.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="booking.h" />
+    <ClInclude Include="cinema.h" />
+    <ClInclude Include="movie.h" />
+    <ClInclude Include="room.h" />
+    <ClInclude Include="sale.h" />
+    <ClInclude Include="schedule.h" />
+    <ClInclude Include="seat.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
