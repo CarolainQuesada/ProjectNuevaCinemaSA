@@ -1,10 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\",
+  "WorkspaceRootPath": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:NuevaCinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\movie.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:movie.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\cinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:cinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,13 +38,39 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "cinema.cpp",
+              "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\cinema.cpp",
+              "RelativeDocumentMoniker": "cinema.cpp",
+              "ToolTip": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\cinema.cpp",
+              "RelativeToolTip": "cinema.cpp",
+              "ViewState": "AQIAAHgAAAAAAAAAAAAAACkAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-25T16:19:39.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "movie.cpp",
+              "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\movie.cpp",
+              "RelativeDocumentMoniker": "movie.cpp",
+              "ToolTip": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\movie.cpp",
+              "RelativeToolTip": "movie.cpp",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-08-25T16:19:35.336Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "NuevaCinema.cpp",
-              "DocumentMoniker": "C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
+              "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
               "RelativeDocumentMoniker": "NuevaCinema.cpp",
-              "ToolTip": "C:\\programacion\\newdirectory\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp",
-              "RelativeToolTip": "NuevaCinema.cpp",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "ToolTip": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\NuevaCinema.cpp*",
+              "RelativeToolTip": "NuevaCinema.cpp*",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-10T19:59:05.77Z",
               "EditorCaption": ""
