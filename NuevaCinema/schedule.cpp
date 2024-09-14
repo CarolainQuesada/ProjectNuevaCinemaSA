@@ -1,34 +1,44 @@
 #include <iostream>
 #include "room.h"
 #include"schedule.h"
+#include"movie.h"
+
+
 using namespace std;
 
 // Implementación de los constructores
 Schedule::Schedule() {
-    string date = "";
-    int startHour = 0;
-    int endHour = 0;
-    Movie movie; 
-    Room room;
+    movieName="";
+    date = "";
+    startHour = 0;
+    endHour = 0;
+    roomNumber = 0;
 }
-Schedule::Schedule(string date, int startHour, int endHour, Movie movie, Room room) {
 
-    this->movie = movie;
+Schedule::Schedule(const string& movieName, int startHour, int endHour, const string& date, int roomNumber){
+    this->movieName = movieName;
+    this->date = date;
     this->startHour = startHour;
     this->endHour= endHour;
-    this->movie = movie;
-    this->room = room;
+    this->roomNumber = roomNumber;
 }
-
+    
 // Implementación de los getters
+string Schedule::getMovieName() { return movieName; }
+int Schedule::getRoomNumber() {return roomNumber;}
 string Schedule::getDate() {return date;}
 int Schedule::getStartHour() {return startHour;}
 int Schedule::getEndHour() {return endHour;}
-Movie Schedule::getMovie() {return movie;}
-Room Schedule::getRoom() { return room;}
 
 // Implementación de los setters
-void Schedule::setDate(string date) {
+
+void Schedule::setMovieName(const string& movieName) {
+    this->movieName= movieName;
+}
+void Schedule::setRoomNumber(int roomNumber) {
+    this->roomNumber =roomNumber; 
+}
+void Schedule::setDate(const string& date) {
     this->date = date;
 }
 
@@ -40,10 +50,11 @@ void Schedule::setEndHour(int endHour) {
     this->endHour = endHour;
 }
 
-void Schedule::setMovie(Movie movie) {
-    this->movie = movie;
-}
 
-void Schedule::setRoom(Room room) {
-    this->room = room;
+void Schedule::displaySchedule() {
+    std::cout << "Película: " << movieName
+        << ", Fecha: " << date
+        << ", Hora de inicio: " << startHour << ":00"
+        << ", Hora de fin: " << endHour << ":00"
+        << ", Sala: " << roomNumber << std::endl;
 }

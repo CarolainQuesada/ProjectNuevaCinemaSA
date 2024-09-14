@@ -11,7 +11,7 @@ using namespace std;
 
 int main()
 {
-    Cinema cinema; // Crear una instancia del gestor de peliculas
+    Cinema cinema; 
     int option;
 
     do {

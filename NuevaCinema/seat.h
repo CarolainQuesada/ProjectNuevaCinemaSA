@@ -1,22 +1,30 @@
-#pragma once
-
-#include <iostream>
-
-using namespace std;
+#ifndef SEAT_H
+#define SEAT_H
 
 class Seat {
 private:
     int id;
-    string state; //Disponible | Reservada | Vendida
+    char state; // 'D'aviavle,'R' boked,'V' sold
+
 public:
     Seat();
-    Seat(int id, string state);
+    Seat(int id, char state);
 
     // Getters
     int getId();
-    string getState();
+    char getState();
 
     // Setters
     void setId(int id);
-    void setState(string state);
+    void setState(char state);
+
+     
+    // Cambia el estado a reservada
+    void reserve();
+    // Cambia el estado a vendida
+    void sell();
+    // Cambia el estado a disponible
+    void reset();
 };
+
+#endif

@@ -2,33 +2,42 @@
 #include <iostream>
 #ifndef ROOM_H
 #define ROOM_H
+
+#include"schedule.h"
 #include"Movie.h"
 #include"seat.h"
+
+
 
 using namespace std;
 
 class Room {
 private:
-    int id;
-    int seatsNumber;
+    int roomNumber;
+    int numberOfSeats;
     double price;
-    Seat roomSeats[10][10];
+    
 
 public:
 
     Room();
-    Room(int id, int seatsNumber, double price, Seat roomSeats[10][10]);
+    Room(int roomNumber, int numberOfSeats, double price);
+    ~Room();
 
    //getters 
-    int getId();
-    int getSeatsNumber();
+    int getRoomNumber();
+    int getNumberOfSeats();
     double getPrice();
-   Seat(*getRoomSeats())[10]; // Devuelve un puntero a una matriz de 10x10 de Seat
+   
 
     //setters 
-    void setId(int id);
-    void setSeatsNumber(int seatsNumber);
+    void setRoomNumber(int roomNumber);
+    void setNumberOfSeats(int seatsNumber);
     void setPrice(double price);
-    void setRoomSeats(Seat roomSeats[10][10]);
+    
+
+    //metodos 
+    void showRoomInfo();
+   
 };
 #endif

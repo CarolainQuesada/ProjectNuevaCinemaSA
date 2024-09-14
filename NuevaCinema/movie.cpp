@@ -1,13 +1,12 @@
 #include <iostream>
 #include "Movie.h"
-#include <string>
 
 Movie::Movie(){
 	name = "";
 	year = 0;
 	time = 0 ;
 	country = "";
-	reviews = 0; // 0 al 10
+	reviews = 0;
 }
 Movie::Movie (string name, int year, int time, string country, int reviews){
 
@@ -26,15 +25,16 @@ int Movie::getTime() { return time; }
 string Movie::getCountry() { return country; }
 int Movie::getReviews() { return reviews; }
 
+
 // Métodos setter
 void Movie::setName(string name) { this->name = name; }
 void Movie::setYear(int year) { this->year = year; }
 void Movie::setTime(int time) { this->time = time; }
 void Movie::setCountry(string country) { this->country = country; }
-void Movie::setReviews (int review) { this->reviews = reviews; }
+void Movie::setReviews (int reviews) { this->reviews = reviews; }
 
-// funciones a implementar
-void Movie::movieInformation() { //Poner la informacion de manera statica 
+
+void Movie::movieInformation() { 
 	cout << "Nombre: " << name << endl;
 	cout << "Anio: " << year << endl;
 	cout << "Duracion: " << time << " minutos" << endl;

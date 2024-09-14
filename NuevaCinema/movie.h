@@ -1,47 +1,42 @@
-#pragma once
 #ifndef MOVIE_H
 #define MOVIE_H
 #include <iostream>
+#include <string>
+#include "Room.h"
 
-using namespace std;  
-#include <vector>
+using namespace std;
 
 class Movie {
 private:
-
-	string name;
-	int year;
-	int time;
-	string country;
-	int reviews; //0 al 10
-
+    string name;
+    int year;
+    int time;
+    string country;
+    int reviews;
+    
 public:
-	Movie();
+    Movie();
+    Movie(string name, int year, int time, string country, int reviews);
 
-	Movie(string name, int year, int time, string country, int reviews);
+    ~Movie();
 
-	~Movie();
+    // Getters
+    string getName();
+    int getYear();
+    int getTime();
+    string getCountry();
+    int getReviews();
+    //Room getRoom();
 
-	// Getters
-	string getName();
-	int getYear();
-	int getTime();
-	string getCountry();
-	int getReviews();
-
-	// Setters
-	void setName(string name );
-	void setYear(int year );
-	void setTime(int time );
-	void setCountry(string country);
-	void setReviews(int reviews);
-
-	//funciones a imolementar
-	
-	
-	//muestra la informacion de la pelicula 
-	void movieInformation();
-
+    // Setters
+    void setName(string name);
+    void setYear(int year);
+    void setTime(int time);
+    void setCountry(string country);
+    void setReviews(int reviews);
+   // void setRoom(Room room);
+    // Display movie information
+    void movieInformation();
 };
 
-#endif
+#endif // MOVIE_H

@@ -10,31 +10,35 @@ using namespace std;
 class Schedule {
 
 private:
-
+    string movieName;
     string date;
     int startHour;
     int endHour;
-    Movie movie;
-    Room room; 
-
+    int roomNumber;
 public:
 
     Schedule();
-    Schedule(string date, int startHour, int endHour, Movie movie, Room room);
+    Schedule(const string& movieName, int startHour, int endHour,  const string& date, int roomNumber);
 
     //Getters 
     string getDate();
     int getStartHour();
     int getEndHour();
-    Movie getMovie();
-    Room getRoom();
+
+    int getRoomNumber();
+    string getMovieName();
+
 
     //setters 
-    void setDate(string date);
-    void setStartHour(int starHour);
-    void setEndHour(int endHouer);
-    void setMovie(Movie movie);
-    void setRoom(Room room);
 
+    void setMovieName(const string& movieName);
+    void setRoomNumber(int roomNumber);
+
+    void setDate(const string& date);
+    void setStartHour(int startHour);
+    void setEndHour(int endHour);
+
+    //impreme fecha,hora inicula y final
+    void displaySchedule();
 };
 #endif

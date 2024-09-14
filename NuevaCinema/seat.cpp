@@ -1,33 +1,52 @@
 #include<iostream>
-
 #include "Seat.h"
 
-// Implementación de los constructores
+
 Seat::Seat() {
     id = 0;
-    state = "";
-
+    state = 'D';
 }
 
-Seat::Seat(int id, string state) {
-    this->id = id;
-    this->state = state;
+Seat::Seat(int id, char state) {
+    this->id  =id;
+    this->state= state;
 }
 
-// Implementación de los getters
+// Getters
 int Seat::getId() {
     return id;
 }
 
-string Seat::getState() {
+char Seat::getState() {
     return state;
 }
 
-// Implementación de los setters
+// Setters
 void Seat::setId(int id) {
     this->id = id;
 }
 
-void Seat::setState(string state) {
+void Seat::setState(char state) {
     this->state = state;
 }
+
+// Metodos para manejar el estado del asiento
+void Seat::reserve() {
+    if (state == 'D') { 
+        state = 'R'; 
+    }
+}
+
+void Seat::sell() {
+    if (state == 'R') {
+        state = 'V'; 
+    }
+}
+
+void Seat::reset() {
+    if (state == 'R') {
+        state = 'D'; 
+    }
+}
+
+
