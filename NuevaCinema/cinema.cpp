@@ -489,6 +489,7 @@ void Cinema::showSale() {
                 cout << "Numero de asiento no valido" << endl;
             }
 
+
             string idNumber, cardNumber;
             cout << "Ingrese el numero de cedula del cliente: ";
             idNumber = readString();
