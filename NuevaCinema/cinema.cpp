@@ -27,48 +27,72 @@ Cinema::Cinema() : movieCount(4), roomCount(3), scheduleCount(4), reservationCou
 
 void Cinema::menuFile() {
     int subOption;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "Archivo" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "1. Acerca de" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "2. Salir" << endl;
-    cout << "Selecciona una opcion: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Selecciona una opcion: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
     subOption= getInt();
     
 
     if (subOption == 1) {
-        cout << "\nMostrando informacion acerca del sistema.\n" << endl;
+        system("cls");
+        cout << RED << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout << "Mostrando informacion acerca del sistema" << endl;
+        cout << RED << "--------------------------------------------------------------------------------------\n" << RESET << endl;
         showAbout();
         system("pause");
     }
     else if (subOption == 2) {
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "Saliendo del submenu de archivo." << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         system("pause");
     }
     else {
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "Opcion invalida en archivo." << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     }
 }
 
 void Cinema::maintenanceMenu() {
     int subOption;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "Mantenimiento" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "1. Peliculas" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "2. Salas" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "3. Horarios" << endl;
-    cout << "Selecciona una opcion: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Selecciona una opcion: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cin >> subOption;
 
     if (subOption == 1) {
         int action;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "1. Mostrar peliculas\n2. Agregar nueva pelicula" << endl;
-        cout << "Selecciona una opcion: ";
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout << "Selecciona una opcion: "<<endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         action = getInt();
-        
-
+        system("cls");
         if (action == 1) {
             displayMovieData();
             int movieIndex;
-            cout << "Selecciona la pelicula que desea ver: ";
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+            cout << "Selecciona la pelicula que desea ver: "<<endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
             movieIndex = getInt();
 
             showMovieInformation(movieIndex - 1);
@@ -78,7 +102,11 @@ void Cinema::maintenanceMenu() {
             displayMovieData();
         }
         else {
-            cout << "Opcion invalida en mantenimiento" << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+            cout<<RED << "Opcion invalida en mantenimiento!!" <<RESET<< endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         }
     }
     else if (subOption == 2) {
@@ -86,8 +114,12 @@ void Cinema::maintenanceMenu() {
     }
     else if (subOption == 3) {
         int action;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "1. Mostrar harios \n2. Agregar nuevo horario" << endl;
-        cout << "Selecciona una opcion: ";
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout << "Selecciona una opcion: "<<endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         action = getInt();
        
 
@@ -100,49 +132,68 @@ void Cinema::maintenanceMenu() {
         }
 
         else {
-            cout << "Opcion invalida en mantenimiento" << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+            cout << RED << "Opcion invalida en mantenimiento!!" << RESET << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         }
     }
     else {
-        cout << "Opcion invalida en mantenimiento" << endl;
+        cout<<RED << "Opcion invalida en mantenimiento!!"<<RESET << endl;
     }
 }
 
 void Cinema::reservationMenu() {
     int subOption;
     while (true) {
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "Reserva" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "1. Seleccionar pelicula" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "2. Volver" << endl;
-        cout << "Selecciona una opcion: ";
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout << "Selecciona una opcion: "<<endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
        subOption= getInt();
        
-
         if (subOption == 1) {
             handleSeatReservation(); 
         }
         else if (subOption == 2) {
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             cout << "Volviendo al menu principal." << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             break;
         }
         else {
-            cout << "Opcion invalida en reserva." << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+            cout << RED << "Opcion invalida en reserva!!" << RESET << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         }
     }
 }
 // Menu de Venta
 void Cinema::saleMenu() {
     int subOption;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "Venta" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "1. Realizar venta" << endl;
-    cout << "Selecciona una opcion: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Selecciona una opcion: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
    subOption= getInt();
-
     if (subOption == 1) {
         showSale(); 
     }
     else {
-        cout << "Opcion invalida en venta." << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout << RED << "Opcion invalida en venta!!" << RESET << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     }
 }
 void Cinema::showAbout() {
@@ -163,20 +214,30 @@ void Cinema::showAbout() {
 
 
 void Cinema::displayMovieData() {
-    cout << "\nPeliculas disponibles:\n" << endl;
+
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "\nPeliculas disponibles:" << endl;
+    cout<< CYAN << "--------------------------------------------------------------------------------------\n" <<RESET<< endl;
 
     for (int i = 0; i < movieCount; i++) {
         cout << (i + 1) << "- " << movieList[i].getName() << endl;
+        cout << "--------------------------------------------------------------------------------------" << endl;
+
     }
 }
 
 void Cinema::showMovieInformation(int index) {
     if (index >= 0 && index < MAX_MOVIES) {
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "\nInformacion  de la pelicula:" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         movieList[index].movieInformation();
     }
     else {
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << " Opcion invalida." << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     }
     system("pause");
     system("cls");
@@ -185,7 +246,11 @@ void Cinema::showMovieInformation(int index) {
 
 bool Cinema::addMovie(Movie& movie) {
     if (movieCount >= MAX_MOVIES) {
-        cout << "No se pueden agregar mas peliculas" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+        cout <<RED<< "No se pueden agregar mas peliculas"<<RESET << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         return false;
     }
     movieList[movieCount++] = movie;
@@ -196,40 +261,61 @@ void Cinema::addNewMovie() {
     string name, country;
     int year, reviews, time;
     Movie movie;
-
-    cout << "Ingrese el nombre de la pelicula: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Ingrese el nombre de la pelicula: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     name = readString();
     movie.setName(name);
 
-    cout << "Ingrese el anio de la pelicula: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Ingrese el anio de la pelicula: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     year = getInt();
     movie.setYear(year);
 
-    cout << "Ingrese la duracion de la pelicula (minutos): ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Ingrese la duracion de la pelicula (minutos): "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     time = getInt();
     movie.setTime(time);
 
-    cout << "Ingrese el pais de la pelicula: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Ingrese el pais de la pelicula: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     country = readString();
     movie.setCountry(country);
 
-    cout << "Ingrese la resenia de la pelicula calificando del 1 al 10: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout << "Ingrese la resenia de la pelicula calificando del 1 al 10: "<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     reviews= getInt();
     movie.setReviews(reviews);
 
     if (reviews < 1 || reviews > 10) {
-        cout << "Calificacion invalida, debe ser un numero entre 1 y 10" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+        cout<<RED<< "Calificacion invalida!! Debe ser un numero entre 1 y 10" <<RESET<< endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         return;
     }
 
     Movie newMovie(name, year, time, country, reviews);
     if (addMovie(newMovie)) {
-        cout << "Pelicula agregada exitosamente" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout <<YELLOW<< "Pelicula agregada exitosamente"<< RESET << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     }
 }
 
 void Cinema::showRoomInformation() {
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "\nInformacion de las salas:\n" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
     for (int i = 0; i < roomCount; ++i) {
         roomList[i].showRoomInfo();
@@ -240,15 +326,18 @@ void Cinema::showRoomInformation() {
 
 
 void Cinema::displayScheduleData() {
-
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     cout << "\nHorarios disponibles:\n" << endl;
-
+    cout << CYAN << "----------------------------------------------------------------------------------------------------" << RESET << endl;
     for (int i = 0; i < scheduleCount; i++) {
-        cout << (i + 1) << "-Pelicula: " << scheduleList[i].getMovieName()
-            << ", Fecha: " << scheduleList[i].getDate()
-            << ", Hora de inicio: " << scheduleList[i].getStartHour() << ":00"
-            << ", Hora de fin: " << scheduleList[i].getEndHour() << ":00"
-            << ", Sala: " << scheduleList[i].getRoomNumber() << endl;
+        cout << CYAN << "----------------------------------------------------------------------------------------------------" << RESET << endl;
+        cout << (i + 1) << "-Pelicula: " << "|" <<scheduleList[i].getMovieName() << "|"
+            << " Fecha: " << scheduleList[i].getDate()
+            << " Hora de inicio: " << "|" <<scheduleList[i].getStartHour() << ":00" << "|"
+            << " Hora de fin: " << "|" <<scheduleList[i].getEndHour() << ":00" << "|"
+            << " Sala: " << "|" << scheduleList[i].getRoomNumber() << "|" << endl;
+        cout << CYAN << "----------------------------------------------------------------------------------------------------" << RESET << endl;
+
     }
     system("pause");
     system("cls");
@@ -256,7 +345,9 @@ void Cinema::displayScheduleData() {
 
 bool Cinema::addSchedule(Schedule& schedule) {
     if (scheduleCount >= MAX_SCHEDULES) {
-        cout << "No se pueden agregar más horarios" << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+        cout <<RED<< "No se pueden agregar más horarios!"<<RESET << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         return false;
     }
     scheduleList[scheduleCount++] = schedule;
@@ -279,19 +370,36 @@ void Cinema::addNewSchedule() {
     int startHour, endHour, selectRoomNumber;
 
     displayMovieData();
-    cout << "Ingrese el nombre de la pelicula: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+    cout << "Ingrese el nombre de la pelicula: " << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     movieNumber = getInt();
     if (movieExists(movieNumber)) {
-        cout << "Ingrese la fecha del horario (YYYY-MM-DD): ";
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+        cout << "Ingrese la fecha del horario (YYYY-MM-DD): " << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         date = readString();
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
-        cout << "Ingrese la hora de inicio (24h): ";
+        cout << "Ingrese la hora de inicio (24h): " << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         startHour = getInt();
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
-        cout << "Ingrese la hora de fin (24h): ";
+        cout << "Ingrese la hora de fin (24h): " << endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         endHour = getInt();
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
-        cout << "Ingrese el numero de sala: ";
+        cout << "Ingrese el numero de sala: "<<endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         selectRoomNumber = getInt();
         
 
@@ -299,7 +407,9 @@ void Cinema::addNewSchedule() {
             
             
             if (startHour < 0 || startHour >= 24 || endHour < 0 || endHour >= 24 || endHour <= startHour) {
+                cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
                 cout << "Horario invalido. Asegurese de que la hora de inicio sea menor que la hora de fin y que este en el rango valido (0-23)." << endl;
+                cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
                 system("pause");
                 return;
 
@@ -307,22 +417,36 @@ void Cinema::addNewSchedule() {
             }
             Schedule newSchedule(movieList[movieNumber - 1].getName(), startHour, endHour, date, selectRoomNumber);
             if (addSchedule(newSchedule)) {
-                cout << "Horario agregado exitosamente" << endl;
+                cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+                cout <<YELLOW<< "Horario agregado exitosamente!" <<RESET<< endl;
+                cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
                 system("pause");
             }
         }
         else {
-            cout << "Error! salida no valida!";
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+            cout <<RED<< "Error! salida no valida!"<<RESET<<endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
             system("pause");
         }
     }
     else {
-        cout << "Error!! Pelicula no valida!";
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+        cout <<RED << "Error!! Pelicula no valida!"<<RESET<<endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         system("pause");
     }
 }
 void Cinema::displayScheduleDataForMovie(int movieIndex) {
-    cout << "\nHorarios disponibles para la pelicula " << movieList[movieIndex].getName() << ":\n" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+    cout<<RED << "\nHorarios disponibles para la pelicula " << movieList[movieIndex].getName() << ":\n"<<RESET << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
     for (int i = 0; i < scheduleCount; i++) {
         if (scheduleList[i].getMovieName() == movieList[movieIndex].getName()) {
@@ -330,13 +454,19 @@ void Cinema::displayScheduleDataForMovie(int movieIndex) {
                 << ", Hora de inicio: " << scheduleList[i].getStartHour() << ":00"
                 << ", Hora de fin: " << scheduleList[i].getEndHour() << ":00"
                 << ", Sala: " << scheduleList[i].getRoomNumber() << endl;
+
         }
     }
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 }
 
 void Cinema::showRoomInformationForSchedule(int scheduleIndex) {
     int roomNumber = scheduleList[scheduleIndex].getRoomNumber() - 1; 
-    cout << "\nInformacion de la sala para el horario seleccionado:\n" << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+    cout <<RED<< "\nInformacion de la sala para el horario seleccionado:\n"<<RESET << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     roomList[roomNumber].showRoomInfo();
 }
 
@@ -375,22 +505,32 @@ void Cinema::sellSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
 
 void Cinema::handleSeatReservation() {
     system("cls");
- 
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     cout << RED <<"Aviso importante!!!\n" <<RESET<< endl;
     cout << "Si la reserva no ha sido cancelada 30 minutos antes de iniciar la pelicula" << endl;
     cout << "los asientos no pueden ser vendidos y no hay derecho a reclamos\n" << endl;
-    
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     displayMovieData();
 
     int movieIndex;
-    cout << "Selecciona la pelicula que desea reservar (1-" << movieCount << "): ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+    cout <<RED<< "Selecciona la pelicula que desea reservar (1-" << movieCount << "): "<<RESET << endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
     movieIndex = getInt() - 1;
 
     if (movieIndex >= 0 && movieIndex < movieCount) {
         displayScheduleDataForMovie(movieIndex);
 
         int scheduleIndex;
-        cout << "Selecciona el horario deseado (1-" << scheduleCount << "): ";
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+        cout<<RED << "Selecciona el horario deseado (1-" << scheduleCount << "): "<<RESET<<endl;
+        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
         scheduleIndex = getInt() - 1;
 
         if (scheduleIndex >= 0 && scheduleIndex < scheduleCount) {
@@ -401,18 +541,26 @@ void Cinema::handleSeatReservation() {
             showSeats(seatsRoom[roomNumber]);
 
             int row, col;
-            cout << "Ingrese la fila del asiento (1-" << ROWS << "): ";
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+            cout << "Ingrese la fila del asiento (1-" << ROWS << "): " << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
             row = getInt() - 1;
-            cout << "Ingrese la columna del asiento (1-" << COLUMS << "): ";
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
+            cout << "Ingrese la columna del asiento (1-" << COLUMS << "): " << endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
             col = getInt() - 1;
 
             if (row >= 0 && row < ROWS && col >= 0 && col < COLUMS) {
                 if (seatsRoom[roomNumber][row][col].getState() == 'D') {
                     reserveSeat(seatsRoom[roomNumber], row, col);
+                    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
                     cout << "Asiento reservado exitosamente" << endl;
-                    
-
-
+                    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+                   
                     double price = roomList[roomNumber].getPrice();
                     cout << "Precio de la reserva: " << price << endl;
 
@@ -450,7 +598,9 @@ void Cinema::handleSeatReservation() {
 
 void Cinema::showSale() {
     int reservationNumber;
-    cout << "Ingrese el numero de reserva: ";
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+    cout <<RED<< "Ingrese el numero de reserva: "<<RESET<<endl;
+    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
     reservationNumber = getInt();
 
     bool found = false;
@@ -469,31 +619,33 @@ void Cinema::showSale() {
                     sellSeat(seatsRoom[roomNumber], row, col);
                 }
                 else {
-                    cout << "El asiento no estaba reservado." << endl;
+                    cout<<RED << "El asiento no estaba reservado." <<RESET<< endl;
                 }
             }
 
             else {
-                cout << "Numero de asiento no valido" << endl;
+                cout << "Numero de asiento no valido!" << endl;
             }
 
             string idNumber, cardNumber;
-            cout << "Ingrese el numero de cedula del cliente: ";
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+            cout << "Ingrese el numero de cedula del cliente: "<<endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             idNumber = readString();
-            cout << "Ingrese el numero de tarjeta de credito del cliente: ";
+            cout << "Ingrese el numero de tarjeta de credito del cliente: "<<endl;
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             cardNumber = readString();
             cout << "Pago realizado exitosamente. Numero de reserva: " << reservationNumber << endl; 
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
+
             break;
         }
     }
     if (!found) {
-        cout << "Numero de reserva no valido o ya utilizado." << endl;
+        cout <<RED<< "Numero de reserva no valido o ya utilizado." << RESET<< endl;
     }
     system("pause");
 }
-
-
-
         
 string Cinema::readString() {
     string read;
