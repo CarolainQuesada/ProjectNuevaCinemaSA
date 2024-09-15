@@ -18,7 +18,6 @@ Movie::Movie (string name, int year, int time, string country, int reviews){
 }
 Movie::~Movie() {
 }
-// Metodos getter
 string Movie::getName() { return name; }
 int Movie::getYear() { return year; }
 int Movie::getTime() { return time; }
@@ -26,7 +25,6 @@ string Movie::getCountry() { return country; }
 int Movie::getReviews() { return reviews; }
 
 
-// Métodos setter
 void Movie::setName(string name) { this->name = name; }
 void Movie::setYear(int year) { this->year = year; }
 void Movie::setTime(int time) { this->time = time; }

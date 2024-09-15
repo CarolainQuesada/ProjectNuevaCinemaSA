@@ -26,7 +26,6 @@ public:
     int getTime();
     string getCountry();
     int getReviews();
-    //Room getRoom();
 
     // Setters
     void setName(string name);
@@ -34,9 +33,7 @@ public:
     void setTime(int time);
     void setCountry(string country);
     void setReviews(int reviews);
-   // void setRoom(Room room);
-    // Display movie information
     void movieInformation();
 };
 
-#endif // MOVIE_H
+#endif 

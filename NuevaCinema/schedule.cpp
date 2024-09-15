@@ -6,7 +6,6 @@
 
 using namespace std;
 
-// Implementación de los constructores
 Schedule::Schedule() {
     movieName="";
     date = "";
@@ -23,14 +22,11 @@ Schedule::Schedule(const string& movieName, int startHour, int endHour, const st
     this->roomNumber = roomNumber;
 }
     
-// Implementación de los getters
 string Schedule::getMovieName() { return movieName; }
 int Schedule::getRoomNumber() {return roomNumber;}
 string Schedule::getDate() {return date;}
 int Schedule::getStartHour() {return startHour;}
 int Schedule::getEndHour() {return endHour;}
-
-// Implementación de los setters
 
 void Schedule::setMovieName(const string& movieName) {
     this->movieName= movieName;

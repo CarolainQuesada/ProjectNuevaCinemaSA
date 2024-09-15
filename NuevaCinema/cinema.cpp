@@ -7,7 +7,6 @@
 
 using namespace std;
 
-// Constructor que inicializa la lista de peliculas
 Cinema::Cinema() : movieCount(4), roomCount(3), scheduleCount(4), reservationCount(0), reservationIndex(0) {
 
     movieList[0] = Movie("Deadpool", 2016, 108, "USA", 8);
@@ -26,7 +25,6 @@ Cinema::Cinema() : movieCount(4), roomCount(3), scheduleCount(4), reservationCou
      
 }
 
-// Menu de Archivo
 void Cinema::menuFile() {
     int subOption;
     cout << "Archivo" << endl;
@@ -51,7 +49,6 @@ void Cinema::menuFile() {
     }
 }
 
-// Menu de Mantenimiento
 void Cinema::maintenanceMenu() {
     int subOption;
     cout << "Mantenimiento" << endl;
@@ -111,7 +108,6 @@ void Cinema::maintenanceMenu() {
     }
 }
 
-// Menu de Reserva
 void Cinema::reservationMenu() {
     int subOption;
     while (true) {
@@ -150,12 +146,7 @@ void Cinema::saleMenu() {
     }
 }
 void Cinema::showAbout() {
-    
-    const string RED = "\033[31m";
-    const string GREEN = "\033[32m";
-    const string YELLOW = "\033[33m";
-    const string CYAN = "\033[36m";
-    const string RESET = "\033[0m"; 
+ 
 
     cout << CYAN << "*********************************************************" << RESET << endl;
     cout << CYAN << "*         " << GREEN << "Bienvenido al sistema de ventas" << CYAN << "          \t*" << RESET << endl;
@@ -179,8 +170,6 @@ void Cinema::displayMovieData() {
     }
 }
 
-
-// Mostrar detalles de una pelicula
 void Cinema::showMovieInformation(int index) {
     if (index >= 0 && index < MAX_MOVIES) {
         cout << "\nInformacion  de la pelicula:" << endl;
@@ -228,7 +217,6 @@ void Cinema::addNewMovie() {
     reviews= getInt();
     movie.setReviews(reviews);
 
-    // Validar calificación
     if (reviews < 1 || reviews > 10) {
         cout << "Calificacion invalida, debe ser un numero entre 1 y 10" << endl;
         return;
@@ -240,8 +228,6 @@ void Cinema::addNewMovie() {
     }
 }
 
-
-// info de salas
 void Cinema::showRoomInformation() {
     cout << "\nInformacion de las salas:\n" << endl;
 
@@ -253,7 +239,6 @@ void Cinema::showRoomInformation() {
 }
 
 
-//mostrar horarios
 void Cinema::displayScheduleData() {
 
     cout << "\nHorarios disponibles:\n" << endl;
@@ -269,7 +254,6 @@ void Cinema::displayScheduleData() {
     system("cls");
 }
 
-// Agregar un horario a la colección
 bool Cinema::addSchedule(Schedule& schedule) {
     if (scheduleCount >= MAX_SCHEDULES) {
         cout << "No se pueden agregar más horarios" << endl;
@@ -288,7 +272,7 @@ bool Cinema::movieExists(int movieNumber) {
 }
 
 
-// Agregar un nuevo horario
+
 void Cinema::addNewSchedule() {
     string date;
     int movieNumber;
@@ -313,14 +297,14 @@ void Cinema::addNewSchedule() {
 
         if (selectRoomNumber <= MAX_ROOMS && selectRoomNumber >= 1) {
             
-            // Validar que el horario sea válido
+            
             if (startHour < 0 || startHour >= 24 || endHour < 0 || endHour >= 24 || endHour <= startHour) {
                 cout << "Horario invalido. Asegurese de que la hora de inicio sea menor que la hora de fin y que este en el rango valido (0-23)." << endl;
-                system("pause"); 
+                system("pause");
                 return;
-               
 
-            }// Crear un nuevo objeto Schedule y agregarlo a la colección
+
+            }
             Schedule newSchedule(movieList[movieNumber - 1].getName(), startHour, endHour, date, selectRoomNumber);
             if (addSchedule(newSchedule)) {
                 cout << "Horario agregado exitosamente" << endl;
@@ -337,7 +321,6 @@ void Cinema::addNewSchedule() {
         system("pause");
     }
 }
-// Mostrar horarios para una pelicula especi
 void Cinema::displayScheduleDataForMovie(int movieIndex) {
     cout << "\nHorarios disponibles para la pelicula " << movieList[movieIndex].getName() << ":\n" << endl;
 
@@ -351,7 +334,6 @@ void Cinema::displayScheduleDataForMovie(int movieIndex) {
     }
 }
 
-// Mostrar info de la sala para un horario especifico
 void Cinema::showRoomInformationForSchedule(int scheduleIndex) {
     int roomNumber = scheduleList[scheduleIndex].getRoomNumber() - 1; 
     cout << "\nInformacion de la sala para el horario seleccionado:\n" << endl;
@@ -373,7 +355,6 @@ void Cinema::showSeats(Seat seatsRoom[ROWS][COLUMS]) {
     }
 }
 
-// Reservar un asiento
 void Cinema::reserveSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
     if (row >= 0 && row < ROWS && col >= 0 && col < COLUMS) {
         seatsRoom[row][col].reserve();
@@ -383,7 +364,6 @@ void Cinema::reserveSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
     }
 }
 
-// Vender un asiento
 void Cinema::sellSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
     if (row >= 0 && row < ROWS && col >= 0 && col < COLUMS) {
         seatsRoom[row][col].sell();
@@ -395,11 +375,10 @@ void Cinema::sellSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
 
 void Cinema::handleSeatReservation() {
     system("cls");
-    const string RED = "\033[31m";
-    const string RESET = "\033[0m";
+ 
     cout << RED <<"Aviso importante!!!\n" <<RESET<< endl;
     cout << "Si la reserva no ha sido cancelada 30 minutos antes de iniciar la pelicula" << endl;
-    cout << "los asientos pueden ser vendidos y no hay derecho a reclamos\n" << endl;
+    cout << "los asientos no pueden ser vendidos y no hay derecho a reclamos\n" << endl;
     
     displayMovieData();
 
@@ -493,38 +472,35 @@ void Cinema::showSale() {
                     cout << "El asiento no estaba reservado." << endl;
                 }
             }
+
             else {
                 cout << "Numero de asiento no valido" << endl;
             }
-
 
             string idNumber, cardNumber;
             cout << "Ingrese el numero de cedula del cliente: ";
             idNumber = readString();
             cout << "Ingrese el numero de tarjeta de credito del cliente: ";
             cardNumber = readString();
-
             cout << "Pago realizado exitosamente. Numero de reserva: " << reservationNumber << endl; 
-
             break;
         }
     }
-
     if (!found) {
         cout << "Numero de reserva no valido o ya utilizado." << endl;
     }
     system("pause");
 }
 
+
+
         
-//funcion para leer una cadena de texto
 string Cinema::readString() {
     string read;
    getline(cin, read);
     return read;
 }
 
-//funcion para pasar a enteros
 int Cinema::getInt() {
     int number;
     bool notNumber = true;
@@ -544,7 +520,6 @@ int Cinema::getInt() {
     return number;
 }
 
-//funcion para pasar a decimal
 double Cinema::getDouble() {
     double number;
     bool notNumber = true;

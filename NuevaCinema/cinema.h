@@ -16,8 +16,11 @@ const int ROWS = 8;
 const int COLUMS = 10;
 const int MAX_RESERVATIONS = 20;
 
-
-
+const string RED = "\033[31m";
+const string GREEN = "\033[32m";
+const string YELLOW = "\033[33m";
+const string CYAN = "\033[36m";
+const string RESET = "\033[0m";
 
 class Cinema {
 private:
@@ -41,41 +44,40 @@ private:
 public:
     Cinema(); 
 
-    // 
+    // menu
     void menuFile();
     void maintenanceMenu();
     void reservationMenu();
     void saleMenu();
 
-    // metodos
+    // metodos para manejar las peliculas 
     void displayMovieData();
     void showMovieInformation(int index);
     void showAbout();
     bool addMovie(Movie& movie);
     void addNewMovie();
 
-    //metodos para  manejar lo horarios 
+    //metodos para  manejar los horarios 
     void displayScheduleData();
     void showScheduleInformation(int index);
     bool addSchedule(Schedule& schedule);
     void addNewSchedule();
-    void initializeDefaultSchedules();
-    void showSchedules();
     bool movieExists(int movieName);
     void displayScheduleDataForMovie(int movieIndex);
     void showRoomInformationForSchedule(int scheduleIndex);
 
-    //metodos para la sala 
+    //metodos para manejar la sala y reservas
     void showRoomInformation();
-    void subAddRoom();
-
     void reserveSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col);
     void sellSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col);
     void showSeats(Seat seatsRoom[ROWS][COLUMS]);
-    //funciones para venta
-    void showSale();
 
+    //funciones para venta
+    void printVoucher(int reservationIndex);
+    void showSale();
     void handleSeatReservation();
+
+    //funciones para verificar la entrada de datos 
     string readString();
     int getInt();
     double getDouble();
