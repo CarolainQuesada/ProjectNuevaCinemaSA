@@ -34,8 +34,8 @@ void Cinema::menuFile() {
     cout << "2. Salir" << endl;
     cout << "Selecciona una opcion: ";
 
-    cin >> subOption;
-    cin.ignore();
+    subOption= getInt();
+    
 
     if (subOption == 1) {
         cout << "\nMostrando informacion acerca del sistema.\n" << endl;
@@ -65,15 +65,15 @@ void Cinema::maintenanceMenu() {
         int action;
         cout << "1. Mostrar peliculas\n2. Agregar nueva pelicula" << endl;
         cout << "Selecciona una opcion: ";
-        cin >> action;
-        cin.ignore();
+        action = getInt();
+        
 
         if (action == 1) {
             displayMovieData();
             int movieIndex;
             cout << "Selecciona la pelicula que desea ver: ";
-            cin >> movieIndex;
-            cin.ignore();
+            movieIndex = getInt();
+
             showMovieInformation(movieIndex - 1);
         }
         else if (action == 2) {
@@ -91,8 +91,8 @@ void Cinema::maintenanceMenu() {
         int action;
         cout << "1. Mostrar harios \n2. Agregar nuevo horario" << endl;
         cout << "Selecciona una opcion: ";
-        cin >> action;
-        cin.ignore();
+        action = getInt();
+       
 
         if (action == 1) {
             displayScheduleData();
@@ -119,8 +119,8 @@ void Cinema::reservationMenu() {
         cout << "1. Seleccionar pelicula" << endl;
         cout << "2. Volver" << endl;
         cout << "Selecciona una opcion: ";
-        cin >> subOption;
-        cin.ignore();
+       subOption= getInt();
+       
 
         if (subOption == 1) {
             handleSeatReservation(); 
@@ -140,8 +140,7 @@ void Cinema::saleMenu() {
     cout << "Venta" << endl;
     cout << "1. Realizar venta" << endl;
     cout << "Selecciona una opcion: ";
-    cin >> subOption;
-    cin.ignore();
+   subOption= getInt();
 
     if (subOption == 1) {
         showSale(); 
@@ -395,6 +394,13 @@ void Cinema::sellSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
 }
 
 void Cinema::handleSeatReservation() {
+    system("cls");
+    const string RED = "\033[31m";
+    const string RESET = "\033[0m";
+    cout << RED <<"Aviso importante!!!\n" <<RESET<< endl;
+    cout << "Si la reserva no ha sido cancelada 30 minutos antes de iniciar la pelicula" << endl;
+    cout << "los asientos pueden ser vendidos y no hay derecho a reclamos\n" << endl;
+    
     displayMovieData();
 
     int movieIndex;
@@ -425,6 +431,8 @@ void Cinema::handleSeatReservation() {
                 if (seatsRoom[roomNumber][row][col].getState() == 'D') {
                     reserveSeat(seatsRoom[roomNumber], row, col);
                     cout << "Asiento reservado exitosamente" << endl;
+                    
+
 
                     double price = roomList[roomNumber].getPrice();
                     cout << "Precio de la reserva: " << price << endl;
@@ -510,9 +518,9 @@ void Cinema::showSale() {
 
         
 //funcion para leer una cadena de texto
-std::string Cinema::readString() {
-    std::string read;
-    std::getline(std::cin, read);
+string Cinema::readString() {
+    string read;
+   getline(cin, read);
     return read;
 }
 
@@ -521,15 +529,15 @@ int Cinema::getInt() {
     int number;
     bool notNumber = true;
     while (notNumber) {
-        std::cin >> number;
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Favor Digite un Entero." << std::endl;
+        cin >> number;
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "Favor Digite un Entero." << endl;
             notNumber = true;
         }
         else {
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            std::cin.ignore(numeric_limits<streamsize>::max(), '\n');
             notNumber = false;
         }
     }
@@ -541,15 +549,15 @@ double Cinema::getDouble() {
     double number;
     bool notNumber = true;
     while (notNumber) {
-        std::cin >> number;
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-            std::cout << "Favor digitar un numero." << std::endl;
+        cin >> number;
+        if (cin.fail()) {
+            cin.clear();
+            cin.ignore(std::numeric_limits<streamsize>::max(), '\n');
+            cout << "Favor digitar un numero." << endl;
             notNumber = true;
         }
         else {
-            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
             notNumber = false;
         }
     }

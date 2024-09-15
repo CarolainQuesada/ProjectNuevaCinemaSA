@@ -7,16 +7,16 @@
       "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:cinema.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\cinema.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:cinema.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\sale.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
       "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:sale.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
-      "RelativeMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|solutionrelative:room.h||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A3A2B0C8-1ABE-4568-A29E-34A3C9391777}|NuevaCinema.vcxproj|C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\seat.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
@@ -76,7 +76,7 @@
               "RelativeDocumentMoniker": "cinema.cpp",
               "ToolTip": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\cinema.cpp",
               "RelativeToolTip": "cinema.cpp",
-              "ViewState": "AQIAAMsBAAAAAAAAAAAAAOsBAAAAAAAA",
+              "ViewState": "AQIAAAQCAAAAAAAAAAAAAMUBAAARAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-08-25T16:19:39.934Z",
               "IsPinned": true,
@@ -100,7 +100,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "room.h",
               "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\room.h",
               "RelativeDocumentMoniker": "room.h",
@@ -108,11 +108,12 @@
               "RelativeToolTip": "room.h",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAB4AAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-26T18:42:58.774Z"
+              "WhenOpened": "2024-08-26T18:42:58.774Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "cinema.h",
               "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\cinema.h",
               "RelativeDocumentMoniker": "cinema.h",
@@ -120,7 +121,8 @@
               "RelativeToolTip": "cinema.h",
               "ViewState": "AQIAAB4AAAAAAAAAAAAAACkAAAAOAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000680|",
-              "WhenOpened": "2024-08-25T19:54:47.429Z"
+              "WhenOpened": "2024-08-25T19:54:47.429Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -220,7 +222,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "sale.cpp",
               "DocumentMoniker": "C:\\programacion\\ProjectNuevaCinemaSA\\ProjectNuevaCinemaSA\\NuevaCinema\\sale.cpp",
               "RelativeDocumentMoniker": "sale.cpp",
