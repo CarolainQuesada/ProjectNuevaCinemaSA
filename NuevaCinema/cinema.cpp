@@ -115,7 +115,7 @@ void Cinema::maintenanceMenu() {
     else if (subOption == 3) {
         int action;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
-        cout << "1. Mostrar harios \n2. Agregar nuevo horario" << endl;
+        cout << "1. Mostrar horarios \n2. Agregar nuevo horario" << endl;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "Selecciona una opcion: "<<endl;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
@@ -150,7 +150,6 @@ void Cinema::reservationMenu() {
         cout << "Reserva" << endl;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "1. Seleccionar pelicula" << endl;
-        cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
         cout << "2. Volver" << endl;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
@@ -499,14 +498,13 @@ void Cinema::sellSeat(Seat seatsRoom[ROWS][COLUMS], int row, int col) {
         seatsRoom[row][col].sell();
     }
     else {
-        cout << "Asiento no valido." << endl;
+        cout <<RED<< "Asiento no valido!" <<RESET<< endl;
     }
 }
 
 void Cinema::handleSeatReservation() {
     system("cls");
     cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
-
     cout << RED <<"Aviso importante!!!\n" <<RESET<< endl;
     cout << "Si la reserva no ha sido cancelada 30 minutos antes de iniciar la pelicula" << endl;
     cout << "los asientos no pueden ser vendidos y no hay derecho a reclamos\n" << endl;
@@ -515,9 +513,7 @@ void Cinema::handleSeatReservation() {
     displayMovieData();
 
     int movieIndex;
-    cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
-
-    cout <<RED<< "Selecciona la pelicula que desea reservar (1-" << movieCount << "): "<<RESET << endl;
+    cout << "Selecciona la pelicula que desea reservar (1-" << movieCount << "): " << endl;
     cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
     movieIndex = getInt() - 1;
@@ -528,7 +524,7 @@ void Cinema::handleSeatReservation() {
         int scheduleIndex;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
-        cout<<RED << "Selecciona el horario deseado (1-" << scheduleCount << "): "<<RESET<<endl;
+        cout<< "Selecciona el horario deseado (1-" << scheduleCount << "): "<<endl;
         cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
 
         scheduleIndex = getInt() - 1;
@@ -558,7 +554,7 @@ void Cinema::handleSeatReservation() {
                 if (seatsRoom[roomNumber][row][col].getState() == 'D') {
                     reserveSeat(seatsRoom[roomNumber], row, col);
                     cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
-                    cout << "Asiento reservado exitosamente" << endl;
+                    cout <<YELLOW<< "Asiento reservado exitosamente!" <<RESET<< endl;
                     cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
                    
                     double price = roomList[roomNumber].getPrice();
@@ -622,7 +618,6 @@ void Cinema::showSale() {
                     cout<<RED << "El asiento no estaba reservado." <<RESET<< endl;
                 }
             }
-
             else {
                 cout << "Numero de asiento no valido!" << endl;
             }
@@ -632,17 +627,18 @@ void Cinema::showSale() {
             cout << "Ingrese el numero de cedula del cliente: "<<endl;
             cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             idNumber = readString();
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             cout << "Ingrese el numero de tarjeta de credito del cliente: "<<endl;
             cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             cardNumber = readString();
-            cout << "Pago realizado exitosamente. Numero de reserva: " << reservationNumber << endl; 
             cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
-
+            cout<<YELLOW << "Pago realizado exitosamente. Numero de reserva: " << reservationNumber <<RESET<< endl; 
+            cout << CYAN << "--------------------------------------------------------------------------------------" << RESET << endl;
             break;
         }
     }
     if (!found) {
-        cout <<RED<< "Numero de reserva no valido o ya utilizado." << RESET<< endl;
+        cout <<RED<< "Numero de reserva no valido o ya utilizado!" << RESET<< endl;
     }
     system("pause");
 }
