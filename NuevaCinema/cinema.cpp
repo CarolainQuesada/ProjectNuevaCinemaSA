@@ -9,19 +9,19 @@ using namespace std;
 
 Cinema::Cinema() : movieCount(4), roomCount(3), scheduleCount(4), reservationCount(0), reservationIndex(0) {
 
-    movieList[0] = Movie("Deadpool", 2016, 108, "USA", 8);
-    movieList[1] = Movie("Coraline", 2009, 100, "USA", 9);
+    movieList[0] = Movie("Deadpool", 2016, 120, "USA", 8);
+    movieList[1] = Movie("Coraline", 2009, 120, "USA", 9);
     movieList[2] = Movie("Romper el Circulo", 2022, 120, "Espania", 7);
-    movieList[3] = Movie("Tinkerbell", 2008, 76, "USA", 6);
+    movieList[3] = Movie("Tinkerbell", 2008, 60, "USA", 6);
 
    roomList[0] = Room(1, 80, 3500);
     roomList[1] = Room(2, 80, 4500);
     roomList[2] = Room(3, 80, 5500);
 
-    scheduleList[0] = Schedule("Deadpool", 14, 30, "2024-09-01", 1);
-    scheduleList[1] = Schedule("Coraline", 16, 45, "2024-09-01", 2);
-    scheduleList[2] = Schedule("Romper el Circulo", 19, 30, "2024-09-01", 3);
-    scheduleList[3] = Schedule("Tinkerbell", 21, 00, "2024-09-01", 1);
+    scheduleList[0] = Schedule("Deadpool", 14, 16, "2024-09-01", 1);
+    scheduleList[1] = Schedule("Coraline", 10, 12, "2024-09-01", 2);
+    scheduleList[2] = Schedule("Romper el Circulo", 19, 21, "2024-09-01", 3);
+    scheduleList[3] = Schedule("Tinkerbell", 21, 22, "2024-09-01", 1);
      
 }
 
